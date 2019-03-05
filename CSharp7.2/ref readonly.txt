@@ -1,0 +1,7 @@
+﻿public ref readonly PlayerData GetPlayerData()
+
+and call is
+ref readonly PlayerData dataRef = ref GetPlayerData();
+
+See example here
+CSharp7\2 - RefReturnsAndLocal.cs

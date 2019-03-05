@@ -1,0 +1,6 @@
+﻿Can compile with -refonly now.
+
+Generates REFERENCE ONLY ASSEMBLIES
+
+"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.1\System.Data.dll"
+

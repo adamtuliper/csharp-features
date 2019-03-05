@@ -1,0 +1,4 @@
+﻿In csproj note version or latest
+<PropertyGroup>
+  <LangVersion>latest</LangVersion>
+</PropertyGroup>
