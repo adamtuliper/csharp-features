@@ -12,23 +12,15 @@ namespace csharp_features.CSharp8
 
         }
 
-        public enum Rainbow
-        {
-            Red,
-            Orange,
-            Yellow,
-            Blue,
-            Indigo,
-            Violet
-        }
 
         static string Display(object o) => o switch
         {
             Point { X: 0, Y: 0 } => "origin",
+            Point p => $"({p.X}, {p.Y})",
             _ => "unknown"
         };
 
-        static string Display1(object o)
+        static string DisplayOriginal(object o)
         {
             switch (o)
             {
@@ -41,14 +33,7 @@ namespace csharp_features.CSharp8
             }
         }
 
-        //static string Display(object o) => o switch
-        //{
-        //    Point { X: 0, Y: 0 } p => "origin",
-        //    Point { X: var x, Y: var y } p => $"({x}, {y})",
-        //    _ => "unknown"
-        //};
-
-
+        
         public enum State
         {
             NotSet = 0,
@@ -67,9 +52,8 @@ namespace csharp_features.CSharp8
         }
 
 
-        //static State ChangeState(State current, Transition transition, bool hasKey) 
-        //    =>
-        //    int  switch
+        //static State ChangeState(State current, Transition transition, bool hasKey)
+        //    => (current, transition) switch
         //{
         //    (Opened, Close) => Closed,
         //    (Closed, Open) => Opened,

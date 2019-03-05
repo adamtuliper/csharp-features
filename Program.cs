@@ -11,6 +11,7 @@ using System.Net.Http.Headers;
 using csharp_features.CSharp7;
 using csharp_features.MiscImportant;
 using CSharp7;
+using csharp_features.CSharp8;
 
 namespace csharp_features
 {
@@ -19,6 +20,7 @@ namespace csharp_features
        
         static async Task Main(string[] args)
         {
+            RangeAndIndices.Process();
             tuples_equality.Run();
             array_initializer_for_stackalloc.Run();
             SpanGoodness.SpanWork();

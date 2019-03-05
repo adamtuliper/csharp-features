@@ -42,7 +42,7 @@ namespace c_sharp_7.CSharp7
 
             //Out vars can be used anywhere you need out variables
             GetMonthAndYear(out string month, out string year);
-
+           
             //I don't really care about the year
             GetMonthAndYear(out string theMonth, out _);
         }

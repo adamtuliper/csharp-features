@@ -89,6 +89,7 @@ namespace c_sharp_7.CSharp7
                 //I only care about a rectangle
                 Console.WriteLine($"Rectangle {rect.GetArea()}");
             }
+            //Note rect is valid but may be null
             //rect.Length++;
             //Since is does variable 
             if (shape.GetArea() is var theArea && theArea > 5)
@@ -103,6 +104,9 @@ namespace c_sharp_7.CSharp7
 
                 case Circle c:
                     WriteLine($"Circle with radius {c.Radius}");
+                    break;
+                case IEnumerable<int> ieInt:
+                    WriteLine("IEnumerable<int>");
                     break;
                 case Rectangle s when (s.Length == s.Height):
                     WriteLine($"Square {s.Length} x {s.Height}");

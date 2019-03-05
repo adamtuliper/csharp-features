@@ -6,8 +6,30 @@ using System.Threading.Tasks;
 
 namespace c_sharp_7.CSharp8
 {
-    class default_interface_implementation
+
+    //Eventually
+#if CSharp8
+    interface ILogger
     {
-        //https://github.com/dotnet/csharplang/blob/master/proposals/default-interface-methods.md
+        void Log(LogLevel level, string message);
+        void Log(Exception ex) => Log(LogLevel.Error, ex.ToString()); // New overload
     }
+
+    internal enum LogLevel
+    {
+        None,
+        Debug,
+        Error
+    }
+
+    class ConsoleLogger : ILogger
+    {
+        public void Log(LogLevel level, string message)
+        {
+            throw null;
+        }
+
+        // Log(Exception) gets default implementation
+    }
+#endif
 }
